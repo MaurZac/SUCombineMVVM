@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F3369EF82A961F29A9FEB5 /* Pods_SUCombineMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124CCEF833BC182299167AF7 /* Pods_SUCombineMVVM.framework */; };
 		C5ABB4972855A26D00C06156 /* SUCombineMVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4962855A26D00C06156 /* SUCombineMVVMApp.swift */; };
 		C5ABB4992855A26D00C06156 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4982855A26D00C06156 /* ContentView.swift */; };
 		C5ABB49B2855A26F00C06156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5ABB49A2855A26F00C06156 /* Assets.xcassets */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124CCEF833BC182299167AF7 /* Pods_SUCombineMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SUCombineMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5018D788F7A8AD04368A94 /* Pods-SUCombineMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUCombineMVVM.debug.xcconfig"; path = "Target Support Files/Pods-SUCombineMVVM/Pods-SUCombineMVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		A014C9AE790765DECCB24FD3 /* Pods-SUCombineMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SUCombineMVVM.release.xcconfig"; path = "Target Support Files/Pods-SUCombineMVVM/Pods-SUCombineMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		C5ABB4932855A26D00C06156 /* SUCombineMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUCombineMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ABB4962855A26D00C06156 /* SUCombineMVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUCombineMVVMApp.swift; sourceTree = "<group>"; };
 		C5ABB4982855A26D00C06156 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,17 +44,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F3369EF82A961F29A9FEB5 /* Pods_SUCombineMVVM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB2BED29262E37C2D685EBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C5018D788F7A8AD04368A94 /* Pods-SUCombineMVVM.debug.xcconfig */,
+				A014C9AE790765DECCB24FD3 /* Pods-SUCombineMVVM.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C5ABB48A2855A26D00C06156 = {
 			isa = PBXGroup;
 			children = (
 				C5ABB4952855A26D00C06156 /* SUCombineMVVM */,
 				C5ABB4942855A26D00C06156 /* Products */,
+				BAB2BED29262E37C2D685EBF /* Pods */,
+				F409A4D8D20C299696FF4798 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +129,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F409A4D8D20C299696FF4798 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				124CCEF833BC182299167AF7 /* Pods_SUCombineMVVM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +144,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5ABB4A12855A26F00C06156 /* Build configuration list for PBXNativeTarget "SUCombineMVVM" */;
 			buildPhases = (
+				B01E55C861D23EB132D9E252 /* [CP] Check Pods Manifest.lock */,
 				C5ABB48F2855A26D00C06156 /* Sources */,
 				C5ABB4902855A26D00C06156 /* Frameworks */,
 				C5ABB4912855A26D00C06156 /* Resources */,
+				D5A70C2FAC7E0227891B7F53 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B01E55C861D23EB132D9E252 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SUCombineMVVM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A70C2FAC7E0227891B7F53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SUCombineMVVM/Pods-SUCombineMVVM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SUCombineMVVM/Pods-SUCombineMVVM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SUCombineMVVM/Pods-SUCombineMVVM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5ABB48F2855A26D00C06156 /* Sources */ = {
@@ -315,6 +384,7 @@
 		};
 		C5ABB4A22855A26F00C06156 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5018D788F7A8AD04368A94 /* Pods-SUCombineMVVM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +414,7 @@
 		};
 		C5ABB4A32855A26F00C06156 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A014C9AE790765DECCB24FD3 /* Pods-SUCombineMVVM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
