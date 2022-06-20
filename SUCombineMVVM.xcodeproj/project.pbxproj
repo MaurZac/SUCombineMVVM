@@ -37,6 +37,7 @@
 		C5ABB4B1285CF6CF00C06156 /* HerosHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosHomeViewModel.swift; sourceTree = "<group>"; };
 		C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosHomeView.swift; sourceTree = "<group>"; };
 		C5ABB4B5285D7C7B00C06156 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		C5ABB4B7286031B900C06156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +58,6 @@
 				4C5018D788F7A8AD04368A94 /* Pods-SUCombineMVVM.debug.xcconfig */,
 				A014C9AE790765DECCB24FD3 /* Pods-SUCombineMVVM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,6 +82,7 @@
 		C5ABB4952855A26D00C06156 /* SUCombineMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C5ABB4B7286031B900C06156 /* Info.plist */,
 				C5ABB4AC285CF36400C06156 /* Credentials.swift */,
 				C5ABB4B0285CF42A00C06156 /* Model */,
 				C5ABB4AE285CF41A00C06156 /* View */,
@@ -394,6 +395,7 @@
 				DEVELOPMENT_TEAM = 75UV9J33HN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SUCombineMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +426,7 @@
 				DEVELOPMENT_TEAM = 75UV9J33HN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SUCombineMVVM/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

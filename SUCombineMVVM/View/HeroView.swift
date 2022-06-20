@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-
+import SDWebImageSwiftUI
 
 
 struct HeroView: View {
@@ -36,7 +36,7 @@ struct HeroView: View {
                             .padding(.top,20)
                     }else{
                         ForEach(heroes){ data in
-                            Text(data.name)
+                            HeroRowView(hero: data)
                         }
                     }
                 }else {
@@ -61,8 +61,29 @@ struct HeroView_Previews: PreviewProvider {
 struct HeroRowView: View {
     var hero: Heroes
     var body: some View{
-        HStack{
+        HStack(alignment: .top, spacing: 15){
+            WebImage(url: extractImage(data: hero.thumbnail))
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 150, height: 150)
             
+            VStack(alignment: .leading, spacing: 8, content: {
+                Text(hero.name)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Text(hero.description)
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .lineLimit(4)
+                    .multilineTextAlignment(.leading)
+            })
+            Spacer(minLength: 0)
         }
+    }
+    
+    func extractImage(data: [String: String]) -> URL {
+        let path = data["path"] ?? ""
+        let ext  = data["extension"] ?? ""
+        return URL(string: "\(path).\(ext)")!
     }
 }
