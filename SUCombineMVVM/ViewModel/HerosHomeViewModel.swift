@@ -15,6 +15,9 @@ class HerosHomeViewModel: ObservableObject {
    
     var searchCancel: AnyCancellable? = nil
     @Published var fetchHero: [Heroes]?  = nil
+    @Published var fetchedComic: [Comic]? = []
+    @Published var offset: Int = 0
+    
     
     init() {
         searchCancel = $searching
@@ -34,22 +37,17 @@ class HerosHomeViewModel: ObservableObject {
         let ts = String(Date().timeIntervalSince1970)
         let hash = MD5(data: "\(ts)\(priKey)\(pubKey)")
         let originalQuery = searching.replacingOccurrences(of: " ", with: "%20")
-        
         let url  = "https://gateway.marvel.com/v1/public/characters?nameStartsWith=\(originalQuery)&ts=\(ts)&apikey=\(pubKey)&hash=\(hash)"
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { datas, ress, errors in
-            
-        
             if let errors = errors {
                 print(errors.localizedDescription)
                 return
             }
-            
             guard let apiData = datas else {
                 print("no data")
                 return
             }
-            
             do{
                 let heroes = try JSONDecoder().decode(ApiResult.self, from: apiData)
                 DispatchQueue.main.async {
@@ -73,6 +71,37 @@ class HerosHomeViewModel: ObservableObject {
             String(format: "%02hhx", $0)
         }
         .joined()
+    }
+    
+    func searchComics(){
+        let ts = String(Date().timeIntervalSince1970)
+        let hash = MD5(data: "\(ts)\(priKey)\(pubKey)")
+        let url  = "https://gateway.marvel.com/v1/public/comics?limit=20&offset=\(offset)&ts=\(ts)&apikey=\(pubKey)&hash=\(hash)"
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: URL(string: url)!) { datas, ress, errors in
+            
+            if let errors = errors {
+                print(errors.localizedDescription)
+                return
+            }
+            
+            guard let apiData = datas else {
+                print("no data")
+                return
+            }
+            
+            do{
+                let comics = try JSONDecoder().decode(ApiComicResult.self, from: apiData)
+                DispatchQueue.main.async {
+                    self.fetchedComic = comics.data.results
+                    print(self.fetchedComic)
+                }
+                
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
+        .resume()
     }
     
 }

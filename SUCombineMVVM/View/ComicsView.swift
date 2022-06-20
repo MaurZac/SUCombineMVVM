@@ -1,65 +1,53 @@
 //
-//  HeroView.swift
+//  ComicsView.swift
 //  SUCombineMVVM
 //
-//  Created by Mauricio Zarate on 17/06/22.
+//  Created by Mauricio Zarate on 20/06/22.
 //
 
 import SwiftUI
-import Combine
 import SDWebImageSwiftUI
 
-
-struct HeroView: View {
+struct ComicsView: View {
     @EnvironmentObject var homeData: HerosHomeViewModel
     var body: some View {
         NavigationView{
-            ScrollView(.vertical, showsIndicators: false, content: {
-                VStack(spacing: 15){
-                    HStack(spacing: 10){
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
-                        TextField("Search Hero", text: $homeData.searching)
-                            .autocapitalization(.none)
-                            .disableAutocorrection(true)
-                    }
-                    .padding(.vertical,10)
-                    .padding(.horizontal)
-                    .background(Color.white)
-                    .shadow(color: Color.black.opacity(0.06), radius: 5, x: 5, y: 5)
-                    .shadow(color: Color.black.opacity(0.06), radius: 5, x: -5, y: -5)
-                }
-                .padding()
-                if let heroes = homeData.fetchHero{
-                    if heroes.isEmpty {
-                        Text("No Results")
-                            .padding(.top,20)
+            ScrollView(.vertical,showsIndicators: false,
+                       content: {
+                if let comic = homeData.fetchedComic{
+                    if comic.isEmpty {
+                        ProgressView()
+                            .padding(.top, 30)
                     }else{
-                        ForEach(heroes){ data in
-                            HeroRowView(hero: data)
+                        VStack(spacing: 15){
+                            ForEach(comic){comic in
+                                ComicRowView(hero: comic)
+                                
+                            }
                         }
                     }
-                }else {
-                    if homeData.searching != ""{
-                        ProgressView()
-                            .padding(.top,20)
-                    }
-                    
+                
                 }
+    
             })
-                .navigationTitle("Marvel's Hero")
+                .onAppear(perform: {
+                    if ((homeData.fetchedComic?.isEmpty) != nil){
+                        homeData.searchComics()
+                    }
+                })
         }
     }
 }
 
-struct HeroView_Previews: PreviewProvider {
+struct ComicsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ComicsView()
     }
 }
 
-struct HeroRowView: View {
-    var hero: Heroes
+
+struct ComicRowView: View {
+    var hero: Comic
     var body: some View{
         HStack(alignment: .top, spacing: 15){
             WebImage(url: extractImage(data: hero.thumbnail))
@@ -69,10 +57,10 @@ struct HeroRowView: View {
                 .cornerRadius(8)
             
             VStack(alignment: .leading, spacing: 8, content: {
-                Text(hero.name)
+                Text(hero.title)
                     .font(.title3)
                     .fontWeight(.bold)
-                Text(hero.description)
+                Text(hero.description ?? "")
                     .font(.caption)
                     .foregroundColor(.gray)
                     .lineLimit(4)
@@ -83,8 +71,8 @@ struct HeroRowView: View {
                         NavigationLink(
                             destination: WebView(url: extractURL(data: data))
                                 .navigationTitle(extractURLType(data: data)),
-                                       label: {
-                                           Text(extractURLType(data: data))
+                            label: {
+                                Text(extractURLType(data: data))
                             })
                     }
                 }

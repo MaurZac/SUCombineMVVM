@@ -19,11 +19,12 @@ struct HerosHomeView: View {
                     Text("Heros")
                 }
                 .environmentObject(homeData)
-            Text("Comics")
+            ComicsView()
                 .tabItem {
                     Image(systemName: "books.vertical.fill")
                     Text("Comics")
                 }
+                .environmentObject(homeData)
         }
     }
 }

@@ -19,6 +19,9 @@
 		C5ABB4B2285CF6CF00C06156 /* HerosHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B1285CF6CF00C06156 /* HerosHomeViewModel.swift */; };
 		C5ABB4B4285CF6EA00C06156 /* HerosHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */; };
 		C5ABB4B6285D7C7B00C06156 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B5285D7C7B00C06156 /* HeroView.swift */; };
+		C5ABB4B9286032BB00C06156 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B8286032BB00C06156 /* WebView.swift */; };
+		C5ABB4BB2860368200C06156 /* ComicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4BA2860368200C06156 /* ComicsView.swift */; };
+		C5ABB4BD286036A200C06156 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4BC286036A200C06156 /* Comic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosHomeView.swift; sourceTree = "<group>"; };
 		C5ABB4B5285D7C7B00C06156 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		C5ABB4B7286031B900C06156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C5ABB4B8286032BB00C06156 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C5ABB4BA2860368200C06156 /* ComicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsView.swift; sourceTree = "<group>"; };
+		C5ABB4BC286036A200C06156 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,8 @@
 			children = (
 				C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */,
 				C5ABB4B5285D7C7B00C06156 /* HeroView.swift */,
+				C5ABB4B8286032BB00C06156 /* WebView.swift */,
+				C5ABB4BA2860368200C06156 /* ComicsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				C5ABB4A62858418700C06156 /* ModelPost.swift */,
+				C5ABB4BC286036A200C06156 /* Comic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,10 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ABB4AD285CF36400C06156 /* Credentials.swift in Sources */,
+				C5ABB4BD286036A200C06156 /* Comic.swift in Sources */,
+				C5ABB4B9286032BB00C06156 /* WebView.swift in Sources */,
 				C5ABB4A9285848D000C06156 /* ListViewModel.swift in Sources */,
 				C5ABB4B6285D7C7B00C06156 /* HeroView.swift in Sources */,
 				C5ABB4A52855A67300C06156 /* NetworkManager.swift in Sources */,
 				C5ABB4B4285CF6EA00C06156 /* HerosHomeView.swift in Sources */,
+				C5ABB4BB2860368200C06156 /* ComicsView.swift in Sources */,
 				C5ABB4A72858418700C06156 /* ModelPost.swift in Sources */,
 				C5ABB4992855A26D00C06156 /* ContentView.swift in Sources */,
 				C5ABB4B2285CF6CF00C06156 /* HerosHomeViewModel.swift in Sources */,
