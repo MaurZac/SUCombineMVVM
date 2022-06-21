@@ -48,6 +48,7 @@ struct HeroView: View {
                 }
             })
                 .navigationTitle("Marvel's Hero")
+            
         }
     }
 }
@@ -92,6 +93,7 @@ struct HeroRowView: View {
             Spacer(minLength: 0)
         }
         .padding(.horizontal)
+        
     }
     
     func extractImage(data: [String: String]) -> URL {

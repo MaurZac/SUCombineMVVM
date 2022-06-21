@@ -15,7 +15,7 @@ class HerosHomeViewModel: ObservableObject {
    
     var searchCancel: AnyCancellable? = nil
     @Published var fetchHero: [Heroes]?  = nil
-    @Published var fetchedComic: [Comic]? = []
+    @Published var fetchedComic: [Comic] = []
     @Published var offset: Int = 0
     
     
@@ -93,8 +93,8 @@ class HerosHomeViewModel: ObservableObject {
             do{
                 let comics = try JSONDecoder().decode(ApiComicResult.self, from: apiData)
                 DispatchQueue.main.async {
-                    self.fetchedComic = comics.data.results
-                    print(self.fetchedComic)
+                    self.fetchedComic.append(contentsOf: comics.data.results)
+                    
                 }
                 
             }catch{

@@ -22,16 +22,38 @@ struct ComicsView: View {
                         VStack(spacing: 15){
                             ForEach(comic){comic in
                                 ComicRowView(hero: comic)
-                                
+                            }
+                            if homeData.offset == homeData.fetchedComic.count{
+                                ProgressView()
+                                    .onAppear(perform: {
+                                        print("loading new data")
+                                        homeData.searchComics()
+                                    })
+                            }else{
+                                GeometryReader{ reader -> Color in
+                                    let minY = reader.frame(in: .global).minY
+                                    let height = UIScreen.main.bounds.height / 1.3
+                                    
+                                    if !homeData.fetchedComic.isEmpty && minY < height {
+                                        print("last")
+                                        DispatchQueue.main.async {
+                                            homeData.offset = homeData.fetchedComic.count
+                                        }
+                                    }
+                                    return Color.clear
+                                }
+                                .frame(width: 20, height: 20)
                             }
                         }
+                        .padding(.bottom)
                     }
                 
                 }
     
             })
+                .navigationTitle("Comic's Section")
                 .onAppear(perform: {
-                    if ((homeData.fetchedComic?.isEmpty) != nil){
+                    if homeData.fetchedComic.isEmpty{
                         homeData.searchComics()
                     }
                 })

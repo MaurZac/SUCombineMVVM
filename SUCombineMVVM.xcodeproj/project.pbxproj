@@ -12,9 +12,7 @@
 		C5ABB4992855A26D00C06156 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4982855A26D00C06156 /* ContentView.swift */; };
 		C5ABB49B2855A26F00C06156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5ABB49A2855A26F00C06156 /* Assets.xcassets */; };
 		C5ABB49E2855A26F00C06156 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5ABB49D2855A26F00C06156 /* Preview Assets.xcassets */; };
-		C5ABB4A52855A67300C06156 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4A42855A67300C06156 /* NetworkManager.swift */; };
 		C5ABB4A72858418700C06156 /* ModelPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4A62858418700C06156 /* ModelPost.swift */; };
-		C5ABB4A9285848D000C06156 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4A8285848D000C06156 /* ListViewModel.swift */; };
 		C5ABB4AD285CF36400C06156 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4AC285CF36400C06156 /* Credentials.swift */; };
 		C5ABB4B2285CF6CF00C06156 /* HerosHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B1285CF6CF00C06156 /* HerosHomeViewModel.swift */; };
 		C5ABB4B4285CF6EA00C06156 /* HerosHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */; };
@@ -33,9 +31,7 @@
 		C5ABB4982855A26D00C06156 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C5ABB49A2855A26F00C06156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5ABB49D2855A26F00C06156 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C5ABB4A42855A67300C06156 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C5ABB4A62858418700C06156 /* ModelPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPost.swift; sourceTree = "<group>"; };
-		C5ABB4A8285848D000C06156 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		C5ABB4AC285CF36400C06156 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		C5ABB4B1285CF6CF00C06156 /* HerosHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosHomeViewModel.swift; sourceTree = "<group>"; };
 		C5ABB4B3285CF6EA00C06156 /* HerosHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosHomeView.swift; sourceTree = "<group>"; };
@@ -95,8 +91,6 @@
 				C5ABB4AF285CF42100C06156 /* ViewModel */,
 				C5ABB4962855A26D00C06156 /* SUCombineMVVMApp.swift */,
 				C5ABB4982855A26D00C06156 /* ContentView.swift */,
-				C5ABB4A42855A67300C06156 /* NetworkManager.swift */,
-				C5ABB4A8285848D000C06156 /* ListViewModel.swift */,
 				C5ABB49A2855A26F00C06156 /* Assets.xcassets */,
 				C5ABB49C2855A26F00C06156 /* Preview Content */,
 			);
@@ -264,9 +258,7 @@
 				C5ABB4AD285CF36400C06156 /* Credentials.swift in Sources */,
 				C5ABB4BD286036A200C06156 /* Comic.swift in Sources */,
 				C5ABB4B9286032BB00C06156 /* WebView.swift in Sources */,
-				C5ABB4A9285848D000C06156 /* ListViewModel.swift in Sources */,
 				C5ABB4B6285D7C7B00C06156 /* HeroView.swift in Sources */,
-				C5ABB4A52855A67300C06156 /* NetworkManager.swift in Sources */,
 				C5ABB4B4285CF6EA00C06156 /* HerosHomeView.swift in Sources */,
 				C5ABB4BB2860368200C06156 /* ComicsView.swift in Sources */,
 				C5ABB4A72858418700C06156 /* ModelPost.swift in Sources */,
